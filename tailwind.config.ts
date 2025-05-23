@@ -20,8 +20,8 @@ export default {
 		},
 		extend: {
 			fontFamily: {
+				'inter': ['Inter', 'system-ui', 'sans-serif'],
 				'orbitron': ['Orbitron', 'monospace'],
-				'inter': ['Inter', 'sans-serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',

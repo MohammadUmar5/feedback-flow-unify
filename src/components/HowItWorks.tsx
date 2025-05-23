@@ -29,7 +29,7 @@ const HowItWorks = () => {
   const colorClasses = {
     cyan: {
       accent: 'text-cyan-400',
-      glow: 'shadow-[0_0_20px_rgba(0,255,255,0.3)]',
+      glow: 'shadow-[0_0_20px_rgba(0,188,212,0.3)]',
       border: 'border-cyan-400/30',
       bg: 'bg-cyan-500/10'
     },
@@ -51,7 +51,7 @@ const HowItWorks = () => {
     <section className="py-20 px-6">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="font-orbitron text-4xl md:text-5xl font-bold text-white mb-6">
+          <h2 className="font-inter text-4xl md:text-5xl font-bold text-white mb-6">
             How It <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">Works</span>
           </h2>
           <p className="font-inter text-xl text-gray-300 max-w-2xl mx-auto">
@@ -71,16 +71,13 @@ const HowItWorks = () => {
                 hover:scale-105 transition-all duration-300 w-full max-w-sm
                 relative group
               `}>
-                {/* Step Number */}
-                <div className={`
-                  text-6xl font-orbitron font-bold mb-4 
-                  ${colorClasses[step.color as keyof typeof colorClasses].accent}
-                `}>
+                {/* Step Icon */}
+                <div className="text-6xl mb-4">
                   {step.icon}
                 </div>
                 
                 <div className={`
-                  text-2xl font-orbitron font-bold mb-2
+                  text-2xl font-inter font-bold mb-2
                   ${colorClasses[step.color as keyof typeof colorClasses].accent}
                 `}>
                   {step.number}. {step.title}
