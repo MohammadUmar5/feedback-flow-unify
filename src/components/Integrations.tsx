@@ -1,9 +1,9 @@
 
 const Integrations = () => {
   const integrations = [
-    { name: "Typeform", icon: "📝", category: "Forms" },
-    { name: "SurveyMonkey", icon: "🐵", category: "Surveys" },
-    { name: "Google Forms", icon: "📊", category: "Forms" },
+    { name: "Typeform", icon: "/lovable-uploads/8939fe50-640f-4d79-ac48-3884f9ce9951.png", category: "Forms", isImage: true },
+    { name: "SurveyMonkey", icon: "🐵", category: "Surveys", isImage: false },
+    { name: "Google Forms", icon: "📊", category: "Forms", isImage: false },
   ];
 
   return (
@@ -29,8 +29,18 @@ const Integrations = () => {
                   hover:shadow-[0_0_20px_rgba(0,255,255,0.2)]
                   transition-all duration-300 hover:scale-110
                 ">
-                  <div className="text-5xl mb-4">
-                    {integration.icon}
+                  <div className="mb-4 flex justify-center items-center h-16">
+                    {integration.isImage ? (
+                      <img 
+                        src={integration.icon} 
+                        alt={integration.name}
+                        className="h-12 w-auto object-contain"
+                      />
+                    ) : (
+                      <div className="text-5xl">
+                        {integration.icon}
+                      </div>
+                    )}
                   </div>
                   <h3 className="font-inter font-semibold text-white text-lg mb-2">
                     {integration.name}
