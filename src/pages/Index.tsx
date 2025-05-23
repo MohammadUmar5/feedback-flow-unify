@@ -1,11 +1,10 @@
 
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { ArrowRight, Shield, Users, Zap, Globe, Brain, Lock } from "lucide-react";
+import { ArrowRight, Shield, Users, Zap } from "lucide-react";
 import ParticleBackground from "@/components/ParticleBackground";
 import HowItWorks from "@/components/HowItWorks";
 import Integrations from "@/components/Integrations";
-import Testimonials from "@/components/Testimonials";
 
 const Index = () => {
   return (
@@ -32,7 +31,7 @@ const Index = () => {
             
             {/* Subtitle */}
             <p className="font-inter text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
-              Aggregate insights from <span className="text-cyan-400 font-semibold">Reddit, Twitter, in-app, surveys, and support</span> — all in one place.
+              Aggregate insights from <span className="text-cyan-400 font-semibold">Typeform, SurveyMonkey, and Google Forms</span> — all in one place.
             </p>
             
             {/* CTA Button */}
@@ -67,96 +66,20 @@ const Index = () => {
           </div>
         </section>
 
-        {/* Value Proposition Section */}
-        <section className="py-20 px-6 border-t border-gray-800">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="font-inter text-3xl md:text-4xl font-bold text-white mb-6">
-                Why Teams Choose Our Platform
-              </h2>
-              <p className="font-inter text-gray-300 text-lg max-w-2xl mx-auto">
-                Everything you need to turn scattered feedback into actionable insights
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="text-center group">
-                <div className="
-                  bg-black/40 backdrop-blur-lg border border-gray-700/50 
-                  rounded-2xl p-8 hover:border-cyan-400/30 
-                  hover:shadow-[0_0_25px_rgba(0,188,212,0.2)]
-                  transition-all duration-300 hover:scale-105
-                ">
-                  <div className="inline-flex items-center justify-center w-16 h-16 bg-cyan-500/10 rounded-full mb-6">
-                    <Globe className="h-8 w-8 text-cyan-400" />
-                  </div>
-                  <h3 className="font-inter text-xl font-semibold text-white mb-4">
-                    Comprehensive Aggregation
-                  </h3>
-                  <p className="font-inter text-gray-300 leading-relaxed">
-                    Pull feedback from Reddit, Twitter, in-app, and popular survey tools like Typeform, SurveyMonkey, and Google Forms — no more fragmented insights.
-                  </p>
-                </div>
-              </div>
-
-              <div className="text-center group">
-                <div className="
-                  bg-black/40 backdrop-blur-lg border border-gray-700/50 
-                  rounded-2xl p-8 hover:border-purple-400/30 
-                  hover:shadow-[0_0_25px_rgba(139,92,246,0.2)]
-                  transition-all duration-300 hover:scale-105
-                ">
-                  <div className="inline-flex items-center justify-center w-16 h-16 bg-purple-500/10 rounded-full mb-6">
-                    <Brain className="h-8 w-8 text-purple-400" />
-                  </div>
-                  <h3 className="font-inter text-xl font-semibold text-white mb-4">
-                    Actionable Insights
-                  </h3>
-                  <p className="font-inter text-gray-300 leading-relaxed">
-                    Cluster and prioritize feedback efficiently to accelerate product decisions and customer satisfaction.
-                  </p>
-                </div>
-              </div>
-
-              <div className="text-center group">
-                <div className="
-                  bg-black/40 backdrop-blur-lg border border-gray-700/50 
-                  rounded-2xl p-8 hover:border-green-400/30 
-                  hover:shadow-[0_0_25px_rgba(34,197,94,0.2)]
-                  transition-all duration-300 hover:scale-105
-                ">
-                  <div className="inline-flex items-center justify-center w-16 h-16 bg-green-500/10 rounded-full mb-6">
-                    <Lock className="h-8 w-8 text-green-400" />
-                  </div>
-                  <h3 className="font-inter text-xl font-semibold text-white mb-4">
-                    Privacy & Security
-                  </h3>
-                  <p className="font-inter text-gray-300 leading-relaxed">
-                    Your data stays protected with industry-leading security standards and compliance.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* How It Works Section */}
         <HowItWorks />
 
         {/* Integrations Section */}
         <Integrations />
 
-        {/* Testimonials Section */}
-        <Testimonials />
-
-        {/* CTA Footer */}
+        {/* Beta Focus Section */}
         <section className="py-20 px-6 border-t border-gray-800">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="font-inter text-4xl md:text-5xl font-bold text-white mb-6">
-              Ready to <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Transform</span> Your Feedback?
+              Be Among the <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">First</span>
             </h2>
             <p className="font-inter text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Join hundreds of teams already making better product decisions with unified feedback insights.
+              Join our exclusive beta program and help shape the future of feedback aggregation. Get lifetime early access benefits.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center max-w-md mx-auto">
@@ -171,7 +94,7 @@ const Index = () => {
             </div>
             
             <p className="font-inter text-sm text-gray-400 mt-6">
-              Free during beta • Cancel anytime • Join 500+ early users
+              Free during beta • Cancel anytime • Limited spots available
             </p>
           </div>
         </section>

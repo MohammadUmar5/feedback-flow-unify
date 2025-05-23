@@ -5,22 +5,22 @@ const HowItWorks = () => {
   const steps = [
     {
       number: "1",
-      title: "Capture",
-      description: "Automatically collect feedback from Reddit, Twitter, support tickets, and in-app messages",
-      icon: "📥",
+      title: "Connect",
+      description: "Link your Typeform, SurveyMonkey, and Google Forms accounts in seconds",
+      icon: "🔗",
       color: "cyan"
     },
     {
       number: "2", 
-      title: "Cluster",
-      description: "AI groups similar feedback topics and identifies patterns across all sources",
-      icon: "🔗",
+      title: "Aggregate",
+      description: "AI automatically collects and organizes feedback from all your forms in one dashboard",
+      icon: "📊",
       color: "pink"
     },
     {
       number: "3",
-      title: "Prioritize", 
-      description: "Smart scoring helps you focus on the most impactful feedback first",
+      title: "Analyze", 
+      description: "Get instant insights and prioritized action items to improve your product",
       icon: "🎯",
       color: "purple"
     }
@@ -55,7 +55,7 @@ const HowItWorks = () => {
             How It <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">Works</span>
           </h2>
           <p className="font-inter text-xl text-gray-300 max-w-2xl mx-auto">
-            Transform scattered feedback into actionable insights in three simple steps
+            Start aggregating feedback in minutes with our simple three-step process
           </p>
         </div>
 
