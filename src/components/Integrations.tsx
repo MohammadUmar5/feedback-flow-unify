@@ -1,9 +1,10 @@
 
+
 const Integrations = () => {
   const integrations = [
-    { name: "Typeform", icon: "/lovable-uploads/8939fe50-640f-4d79-ac48-3884f9ce9951.png", category: "Forms", isImage: true },
-    { name: "SurveyMonkey", icon: "🐵", category: "Surveys", isImage: false },
-    { name: "Google Forms", icon: "📊", category: "Forms", isImage: false },
+    { name: "Typeform", icon: "/lovable-uploads/43bcd981-7d26-4f7b-b248-05d4181243d6.png", category: "Forms", isImage: true },
+    { name: "SurveyMonkey", icon: "/lovable-uploads/a84eb6e4-9d0d-4b08-ab76-1006bc250c0f.png", category: "Surveys", isImage: true },
+    { name: "Google Forms", icon: "/lovable-uploads/65b7691d-5064-455b-a380-567ef8230750.png", category: "Forms", isImage: true },
   ];
 
   return (
@@ -65,3 +66,4 @@ const Integrations = () => {
 };
 
 export default Integrations;
+
