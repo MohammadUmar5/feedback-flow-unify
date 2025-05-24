@@ -31,6 +31,5 @@ jobs:
       if: github.ref == 'refs/heads/main'
       uses: peaceiris/actions-gh-pages@v3
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
+        github_token: ${{ secrets.GH_PAT }}   # <-- change here to use your PAT secret
         publish_dir: ./dist
-        cname: your-custom-domain.com # Remove this line if you don't have a custom domain
