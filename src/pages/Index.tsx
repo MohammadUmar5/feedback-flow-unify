@@ -5,8 +5,11 @@ import { ArrowRight, Shield, Users, Zap } from "lucide-react";
 import ParticleBackground from "@/components/ParticleBackground";
 import HowItWorks from "@/components/HowItWorks";
 import Integrations from "@/components/Integrations";
+import { useBetaSignup } from "@/hooks/useBetaSignup";
 
 const Index = () => {
+  const { email, setEmail, isLoading, handleSignup } = useBetaSignup();
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white relative overflow-hidden">
       <ParticleBackground />
@@ -40,7 +43,7 @@ const Index = () => {
                 size="lg" 
                 className="font-inter bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-12 py-6 text-xl font-semibold rounded-full shadow-[0_0_30px_rgba(0,188,212,0.3)] hover:shadow-[0_0_50px_rgba(0,188,212,0.6)] transition-all duration-300 group"
               >
-                Join the Beta
+                Let's Build This Together
                 <ArrowRight className="ml-3 h-6 w-6 group-hover:translate-x-1 transition-transform" />
               </Button>
               <p className="font-inter text-sm text-gray-400 mt-4">
@@ -82,16 +85,23 @@ const Index = () => {
               Join our exclusive beta program and help shape the future of feedback aggregation. Get lifetime early access benefits.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center max-w-md mx-auto">
+            <form onSubmit={handleSignup} className="flex flex-col sm:flex-row gap-4 justify-center items-center max-w-md mx-auto">
               <input 
                 type="email" 
                 placeholder="Enter your email"
-                className="font-inter flex-1 px-6 py-4 bg-black/40 border border-gray-700 rounded-full text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 backdrop-blur-lg"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                disabled={isLoading}
+                className="font-inter flex-1 px-6 py-4 bg-black/40 border border-gray-700 rounded-full text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 backdrop-blur-lg disabled:opacity-50"
               />
-              <Button className="font-inter bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-4 rounded-full shadow-[0_0_20px_rgba(0,188,212,0.3)] hover:shadow-[0_0_30px_rgba(0,188,212,0.5)] transition-all duration-300">
-                Join Beta
+              <Button 
+                type="submit"
+                disabled={isLoading}
+                className="font-inter bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-4 rounded-full shadow-[0_0_20px_rgba(0,188,212,0.3)] hover:shadow-[0_0_30px_rgba(0,188,212,0.5)] transition-all duration-300 disabled:opacity-50"
+              >
+                {isLoading ? "Joining..." : "Join Beta"}
               </Button>
-            </div>
+            </form>
             
             <p className="font-inter text-sm text-gray-400 mt-6">
               Free during beta • Cancel anytime • Limited spots available
